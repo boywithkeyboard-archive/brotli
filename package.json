@@ -1,0 +1,41 @@
+{
+  "name": "@boywithkeyboard/brotli",
+  "version": "1.0.0",
+  "author": "Samuel Kopp (https://samuelkopp.de)",
+  "license": "MIT",
+  "description": "A pure JavaScript implementation of Brotli.",
+  "funding": "https://github.com/sponsors/boywithkeyboard",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/index.d.ts",
+    "./dist/index.mjs",
+    "./dist/index.cjs"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "curl https://raw.githubusercontent.com/google/brotli/master/js/decode.ts -o ./third_party/decode.ts && esbuild ./third_party/decode.ts --bundle --minify --format=esm --outfile=./third_party/decode.js && rimraf third_party/decode.ts && builder --esm --cjs && tsc"
+  },
+  "devDependencies": {
+    "@boywithkeyboard/builder": "^0.4.0",
+    "@types/node": "^20.8.10",
+    "esbuild": "^0.19.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
