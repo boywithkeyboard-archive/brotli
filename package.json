@@ -5,6 +5,7 @@
   "license": "MIT",
   "description": "A pure JavaScript implementation of Brotli.",
   "funding": "https://github.com/sponsors/boywithkeyboard",
+  "repository": "github:boywithkeyboard/brotli",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
