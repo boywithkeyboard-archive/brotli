@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@boywithkeyboard/builder": "^0.4.1",
-    "@types/node": "^20.9.0",
+    "@types/node": "^20.9.1",
     "esbuild": "^0.19.5",
     "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
